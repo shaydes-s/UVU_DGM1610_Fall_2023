@@ -1,0 +1,4 @@
+C:\Users\Shayl\OneDrive\Desktop\git stuff\UVU_DGM1610_Fall_2023\unit1\obj\Debug\net7.0\unit1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Shayl\OneDrive\Desktop\git stuff\UVU_DGM1610_Fall_2023\unit1\obj\Debug\net7.0\unit1.AssemblyInfoInputs.cache
+C:\Users\Shayl\OneDrive\Desktop\git stuff\UVU_DGM1610_Fall_2023\unit1\obj\Debug\net7.0\unit1.AssemblyInfo.cs
+C:\Users\Shayl\OneDrive\Desktop\git stuff\UVU_DGM1610_Fall_2023\unit1\obj\Debug\net7.0\unit1.csproj.CoreCompileInputs.cache
