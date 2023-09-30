@@ -17,10 +17,12 @@ public class PlayerController : MonoBehaviour
     private float crouchingHeight = 1.25f;
     private float standingHeight = 1.8f;
     private bool isCrouching = false;
+    Transform capsule;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        capsule = this.gameObject.transform.GetChild(0);
     }
 
     // Update is called once per frame
@@ -38,6 +40,8 @@ public class PlayerController : MonoBehaviour
         moveDirection.z = moveDirection.z * moveSpeed;
 
         controller.Move(moveDirection * Time.deltaTime);
+
+        capsule.transform.LookAt(transform.position + new Vector3(moveDirection.x, 0f, moveDirection.z));
 
         
         if ((Input.GetButton("Jump") == true) && (controller.isGrounded) && isJumping == false && isCrouching == false)
