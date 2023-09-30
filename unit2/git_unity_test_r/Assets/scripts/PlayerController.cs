@@ -10,6 +10,13 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private Vector3 moveDirection;
     private bool isJumping;
+    private bool isSprinting = false;
+    private float sprintSpeed = 12f;
+    private float walkSpeed = 5f;
+    private float crouchSpeed = 2f;
+    private float crouchingHeight = 1.25f;
+    private float standingHeight = 1.8f;
+    private bool isCrouching = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +26,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         
@@ -32,7 +40,7 @@ public class PlayerController : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
 
         
-        if ((Input.GetButton("Jump") == true) && (controller.isGrounded) && isJumping == false)
+        if ((Input.GetButton("Jump") == true) && (controller.isGrounded) && isJumping == false && isCrouching == false)
         {
             isJumping = true;
             if (isJumping == true)
@@ -50,6 +58,45 @@ public class PlayerController : MonoBehaviour
         if (moveDirection.y < -gravity)
         {
             moveDirection.y = -gravity;
+        }
+
+
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
+        }
+        if (isSprinting == true)
+        {
+            moveSpeed = sprintSpeed;
+            isSprinting = false;
+        }
+        else
+        {
+            moveSpeed = walkSpeed;
+        }
+
+        if(Input.GetKey(KeyCode.RightShift))
+        {
+            isCrouching = true;
+        }
+        else
+        {
+            isCrouching = false;
+        }
+
+        if (isCrouching == true)
+        {
+            controller.height = crouchingHeight;
+            moveSpeed = crouchSpeed;
+        }
+        else
+        {
+            controller.height = standingHeight;
         }
     }
 }
