@@ -21,7 +21,10 @@ public class destroyOutOfBounds : MonoBehaviour
         }
         else if(transform.position.z < lowerBounds)
         {
+            if(this.gameObject.tag != "item")
+            {
             Debug.Log("Game Over");
+            }
             Destroy(gameObject);
             //Time.timescale = 0;
         }
