@@ -36,9 +36,11 @@ public class NewBehaviourScript : MonoBehaviour
         }
 
     }
-        //delete objects it collides with
+        //made bullets not work so I am silencing this vvvvv
+
+        /*delete objects it collides with
         private void OnTriggerEnter(Collider other)
         {
-            Destroy(other.gameObject);
-        }
+            //Destroy(other.gameObject);
+        }*/
 }
