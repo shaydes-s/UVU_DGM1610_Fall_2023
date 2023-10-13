@@ -7,7 +7,7 @@ public class EspawnManager : MonoBehaviour
     public GameObject[] ufoPrefabs; //array to store ufo ships
     private float spawnRangeX = 20f;
     private float spawnPosZ = 30f;
-    private float startDelay = 2f;
+    private float startDelay = 4f;
     private float spawnInterval = 1.5f;
     void Start()
     {

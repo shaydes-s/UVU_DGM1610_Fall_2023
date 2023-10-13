@@ -6,7 +6,10 @@ public class collisionDetect : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject); //destroy this game object
-        Destroy(other.gameObject); //destroy game object it hits
+        if(other.gameObject.tag == "bullet")
+        {
+            Destroy(gameObject); //destroy this game object
+            Destroy(other.gameObject); //destroy game object it hits
+        }
     }
 }

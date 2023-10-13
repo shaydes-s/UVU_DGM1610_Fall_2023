@@ -23,9 +23,10 @@ public class destroyOutOfBounds : MonoBehaviour
             if(this.gameObject.tag != "item")
             {
             Debug.Log("Game Over");
+            Time.timeScale = 0;
             }
             Destroy(gameObject);
-            Time.timeScale = 0;
+
         }
     }
 }

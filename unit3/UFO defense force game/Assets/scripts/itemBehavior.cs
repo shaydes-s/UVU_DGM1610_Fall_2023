@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class itemBehavior : MonoBehaviour
 {   
+
     private int itemCount = 0;
     private void OnTriggerEnter(Collider collider)
     {
@@ -17,7 +18,7 @@ public class itemBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
