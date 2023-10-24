@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -1402224154901814173}
   - component: {fileID: -5398978688567180209}
   - component: {fileID: -747155586932576577}
+  - component: {fileID: 3525179217076063837}
   m_Layer: 0
   m_Name: ufo_baby
   m_TagString: enemy
@@ -175,3 +176,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55704cdce8557b546a40771c8c72f93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 20
+--- !u!114 &3525179217076063837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559653681228418578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5fbda6a22c17a48b170040785f6392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlastSound: {fileID: 0}
+  Button: {fileID: 0}
+  Explosion: {fileID: 0}
